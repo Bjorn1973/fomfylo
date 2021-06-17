@@ -7,13 +7,106 @@
 html {
   font-size: 62.5%;
 }
-
-$oranje: orange;
 body {
-  margin: 10px;
+  width: 1440px;
+  margin: 0 auto;
 }
-h1 {
-  color: $oranje;
-  font-size: 30px;
-  margin: 50px 0;
+header {
+  background-color: $darkblueForm;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  padding-right: 70px;
+  padding-left: 70px;
+  nav {
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      li {
+        margin-right: 4px;
+        a {
+          text-decoration: none;
+          color: $white;
+          font-family: $font_raleway;
+          font-weight: 400;
+          font-size: 1.4rem;
+          padding: 0 20px;
+          cursor: pointer;
+          position: relative;
+          &:hover,
+          &:active {
+            color: $cyanBtn;
+          }
+
+          &:active::after {
+            content: "";
+            width: calc(100% - 40px);
+            height: 2px;
+            background-color: $cyanBtn;
+            position: absolute;
+            left: 20px;
+            bottom: -10px;
+          }
+        }
+      }
+    }
+  }
+}
+main {
+  background-color: $darkblueBG;
+  .bg {
+    background-color: $darkblueForm;
+    background-image: url("../images/bg-curvy-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+    @include flex(column, center, center);
+    padding-bottom: 5.5rem;
+    h1 {
+      font-family: $font_open;
+      font-size: 3rem;
+      font-weight: 700;
+      color: $white;
+      width: 47%;
+      text-align: center;
+      padding: 4.5rem 0;
+    }
+    p {
+      width: 30%;
+      font-family: $font_open;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: $white;
+      text-align: center;
+      line-height: 25px;
+      padding-bottom: 2.8rem;
+    }
+    button {
+      background-image: linear-gradient(
+        to right,
+        hsl(176, 68%, 64%),
+        hsl(198, 60%, 50%)
+      );
+      padding: 2rem 9.5rem;
+      border: none;
+      border-radius: 50px;
+      color: $white;
+      font-family: $font_open;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+  }
+  section.one {
+    @include make-col(2, 9rem);
+    padding: 10.5rem 28rem;
+  }
+  form {
+    background-color: $darkblueForm;
+  }
+}
+footer {
+  background-color: $darkblueFooter;
 }

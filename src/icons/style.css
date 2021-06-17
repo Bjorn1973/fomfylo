@@ -15,6 +15,14 @@ Single-colored icons can be modified like so:
 }
 ========================================== */
 
-.icon-library {
-  width: 1.0625em;
+.icon-instagram {
+  width: 0.857421875em;
+}
+
+.icon-twitter {
+  width: 0.9287109375em;
+}
+
+.icon-facebook {
+  width: 0.587890625em;
 }
